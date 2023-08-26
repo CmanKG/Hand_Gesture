@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <title>Hand Gesture</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+  <div class="container">
+  
+    <center>
+    <h3 class="btn btn-warning heading" >Hand Gesture
+
+      <br><br>
+    <span>&#9994;</span>
+    <span>&#9995;</span>
+    <span>&#9996;</span>
+    <span>&#9997;</span>
+    <span>&#128076;</span>
+    <span>&#128077;</span>
+    <span>&#128078;</span> </h3>
+      <p style="font-size: 22px;">Take your selfie to generate hands
+      	<br>
+        <b style="color: yellow"><span>&#128076;</span></b>
+        <br>
+        <b style="color: rgb(255, 255, 255)"><span>&#128077;</span></b>
+        <br>
+        <b style="color: red"><span>&#128078;</span></b>
+        <br>
+      </p>
+      <div class="col-md-4 col-sm-12 col-xs-12">
+	      <label>Webcamview - </label>
+      <div id="camera"></div>
+        <br><br>
+      <button onclick="Takesnapshot()" class="btn btn-warning">Capture image</button>
+      </div>
+      <div class="col-md-4 col-sm-12 col-xs-12">
+        <label>Prediction1-</label>
+        <p class="emotion_name" id="result_emotion_name"></p>
+        <p class="emoji" id="update_emoji"></p>
+        
+        <label>Prediction2-</label>
+        <p class="emotion_name" id="result_emotion_name2"></p>
+        <p class="emoji" id="update_emoji2"></p>
+      </div>
+      <div class="col-md-4 col-sm-12 col-xs-12">
+	      <label>Snapshot - </label>
+        <div id="result"></div>
+        <br><br>
+        <button onclick="Check()" class="btn btn-success">Identify image</button>
+      </div>
+
+    </center>
+
+  </div>
+
+<script src="main.js"></script>
+
+  </body>
+</html>
